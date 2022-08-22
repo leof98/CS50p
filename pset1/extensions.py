@@ -1,7 +1,5 @@
-# implement a program that prompts the user for the name of a file
-# and then outputs that file’s media type if the file’s name ends,
-# case-insensitively, in any of these suffixes:.gif jpg jpeg png pdf txt .zip
-# 14.04
+# implement a program that prompts the user for the name of a file and then outputs that file’s media type if the file’s name ends, case-insensitively,
+# in any of these suffixes:.gif jpg jpeg png pdf txt .zip
 
 file = str(input("File name: "))
 file = file.lower()
@@ -26,3 +24,5 @@ elif file.endswith(".bin"):
 
 elif file.endswith(".jpg") or file.endswith("jpeg"):
     print("image/jpeg")
+
+# 14.04    
