@@ -1,8 +1,6 @@
-# implement a program that prompts the user for a fraction,
-# formatted as X/Y, wherein each of X and Y is an integer, and then outputs,
-# as a percentage rounded to the nearest integer, how much fuel is in the tank. If
-# though, less than 1% remains, output E instead to indicate that the tank is empty
-# And if more than 99% remains, output F instead to indicate that the tank is full
+# Implement a program that prompts the user for a fraction, formatted as X/Y, wherein each of X and Y is an integer, and then outputs, as a percentage rounded to 
+# the nearest integer, how much fuel is in the tank. If though, less than 1% remains, output E instead to indicate that the tank is empty. And if more than 99% 
+# remains, output F instead to indicate that the tank is full
 # 01.05
 
 def main():
