@@ -1,12 +1,13 @@
-# Implement a program that prompts the user for the answer to
-# the Great Question outputting Yes if the user inputs 42 
-# or (case-insensitively) forty-two or forty two.
-# Otherwise output No.
+"""
+Implement a program that prompts the user for the answer to the Great Question
+Outputting Yes if the user inputs 42 or (case-insensitively) forty-two or forty two; Otherwise output No.
+04.22, 11.22, 0.0
+"""
+answer = input('What is the answer to the Great Question of Life, the Universe and Everything? ')
+answer = answer.strip().lower()
 
-resp = str(input("What's the answer to the Great Question of Life, the Universe and Everything? "))
-if resp.strip() == "42" or resp.lower() == "forty two" or resp.lower() == "forty-two":
-    print("Yes")
-else:
-    print("No")
-    
-# 13.04
+match answer:
+    case '42' | 'forty-two' | 'forty two':
+        print('Yes')
+    case _:
+        print('No')
