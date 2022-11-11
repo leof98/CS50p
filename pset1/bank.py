@@ -1,17 +1,17 @@
-# Implement a program that prompts the user for a greeting.
-# If the greeting starts with “hello”, output $0.
-# If the greeting starts with an “h”, output $20.
-# Otherwise, output $100. 
-# Ignore any leading whitespace in the user’s greeting,
-# and treat the user’s greeting case-insensitively.
+"""
+Implement a program that prompts the user for a greeting
+If the greeting starts with “hello”, output $0
+If the greeting starts with an “h”, output $20
+Otherwise, output $100
+Ignore any leading whitespace; Case-insensitively
+04.22 - 11.22 - 0.0
+"""
 
-greeting = str(input("Greeting: "))
+greeting = str(input('Greeting: '))
 
-if greeting.lower().strip().startswith("hello"):
-    print("$0")
+if greeting.lower().strip().startswith('hello'):
+    print('$0')
 elif greeting.lower().startswith('h'):
-    print("$20")
+    print('$20')
 else:
-    print("$100")
-    
-# 13.04
+    print('$100')
