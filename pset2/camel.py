@@ -1,16 +1,19 @@
-# Implement a program that prompts the user for the name of a variable in camel case and outputs the corresponding name in snake case.
-# Assume that the user’s input will indeed be in camel case.
+"""
+A program that prompts for the name of a variable in camel case and outputs the corresponding name in snake case.
+Assume that the input will indeed be in camel case.
+04.22, 11.22, 00.00
+"""
 
-nome = str(input("camelCase: "))
-snake = ""
+name = str(input('camelCase: '))
+snake = ''
 
-for letra in nome:
-    if letra.islower() == False:
-        letra = letra.lower()
-        letra = letra.replace(letra, "_" + letra)
-        snake += letra
-    elif letra.islower() == True:
-        snake += letra
+for letter in name:
+    if letter.islower() == False:
+        letter = letter.lower()
+        letter = letter.replace(letter, '_' + letter)
+        snake += letter
+    elif letter.islower() == True:
+        snake += letter
     else:
         pass
 
