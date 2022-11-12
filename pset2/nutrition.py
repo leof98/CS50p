@@ -1,12 +1,9 @@
-# implement a program that prompts consumers users to input a fruit (case-insensitively) and then
-# outputs the number of calories in one portion of that fruit, per the FDA’s poster for fruits,
-# which is also available as text. Capitalization aside, assume that users will input fruits exactly as written in
-# the poster (e.g., strawberries, not strawberry). Ignore any input that isn’t a fruit.
-# 28.04
-
-def main():
-    fruit = str(input("Item: "))
-    fruit = fruit.lower()
+"""
+A program that prompts consumers users to input a fruit and then
+outputs the number of calories in one portion of that fruit.
+04.22, 11.22
+"""
+def main ():
     fruits = {
         "apple": "130",
         "avocado": "50",
@@ -27,7 +24,10 @@ def main():
         "sweet cherries": "100",
         "tangerine": "50",
         "watermelon": "80"
-         }
+    }
+
+    fruit = str(input('Item: ')).lower()
     if fruit in fruits:
-        print("Calories:", fruits[fruit])
+        print('Calories:',fruits[fruit])
+
 main()
