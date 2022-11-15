@@ -1,11 +1,11 @@
-# implement a program that prompts the user for items, one per line, until the user inputs control-d
-# Then output the user’s grocery list in all uppercase, sorted alphabetically by item,
-# prefixing each line with the number of times the user inputted that item.
-# No need to pluralize the items. Treat the user’s input case-insensitively.
-# 10.05
+"""
+Prompts for items, until ctrl-d. Then output the grocery list in all uppercase,
+sorted alphabetically by item, prefixing each line with the number of times.
+05.11, 11.22
+"""
 
 list = {}
-n = 1
+
 while True:
     try:
         item = input()
@@ -13,9 +13,9 @@ while True:
             list[item] = 0
         if item in list:
             list[item] += 1
+
     except KeyError:
         pass
-
     except EOFError:
         break
 
