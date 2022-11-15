@@ -1,37 +1,32 @@
-# Implement a program that prompts the user for a fraction, formatted as X/Y, wherein each of X and Y is an integer, and then outputs, as a percentage rounded to 
-# the nearest integer, how much fuel is in the tank. If though, less than 1% remains, output E instead to indicate that the tank is empty. And if more than 99% 
-# remains, output F instead to indicate that the tank is full
-# 01.05
+"""
+Prompts for a fraction (Formatted as X/Y) and then outputs as a percentage rounded, how much fuel is in the tank.
+If < than 1% remains, output E instead. And if > than 99% remains, output F instead.
+05.11, 11.22
+"""
 
 def main():
+
     while True:
         try:
-            fuel = input("Fraction: ")
-            x = fuel.split("/")
-            x,y = int(x[0]), int(x[1])
-            n = x / y
-            if y < x:
-                raise ValueError
+            fraction = input('Fraction: ')
+            fraction = fraction.split('/')
+            x,y = int(fraction[0]),int(fraction[1])
+            fuel = (x / y) * 100
 
-            if n < 0.1:
-                print("E")
+            if x > y:
+                pass
+            elif fuel <= 1:
+                print('E')
                 break
-            elif n == 0.25:
-                print("25%")
-                break
-            elif round(n, 2) == 0.50:
-                print("50%")
-                break
-            elif n == 0.75:
-                print("75%")
-                break
-            elif n > 0.99:
-                print("F")
+            elif fuel > 75:
+                print('F')
                 break
             else:
+                fuel = round(fuel)
+                print(f'{fuel}%')
                 break
 
-        except(ValueError, ZeroDivisionError):
+        except (ValueError, ZeroDivisionError):
             pass
 
 main()
