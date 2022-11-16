@@ -1,8 +1,10 @@
-# Implement a program that prompts the user for a date, anno Domini, in month-day-year order, formatted like 9/8/1636 or September 8, 1636, wherein the month in the 
-# latter might be any values in the list. Then output that same date in YYYY-MM-DD format. If the user’s input is not a valid date in either format, prompt the user 
-# again. Assume that every month has no more than 31 days.
+"""
+Prompts for a date, in month-day-year order, formatted like 9/8/1636 or September 8, 1636
+then output that same date in YYYY-MM-DD format. If the input is not a valid date in either format, prompt again.
+"""
 
 def main():
+
     list = [
         "January",
         "February",
@@ -17,34 +19,34 @@ def main():
         "November",
         "December"
     ]
-    while True:
-        date = input("Date: ")
-        try:
-            # Separa a variavel em uma lista com /
-            month, day, year = date.split("/")
-            month = month.replace(" ","")
-            year = year.replace(" ","")
-            # Verifica as condicoes
-            if (int(month) >= 1 and int(month) <= 12) and (int(day) >= 1 and int(day) <= 31):
-                break
-        except:
-            try:
-                # Separa a variavel em uma lista com espacos
-                old_month, old_day, year = date.split(" ")
-                if not old_day.endswith(","):
-                    main()
-                # Faz um loop para encontrar o numero do mes
-                for i in range(len(list)):
-                    if old_month == list[i]:
-                        month = i + 1
-                day = old_day.replace(",","")
-                # Verifica as condicoes
-                if (int(month) >= 1 and int(month) <= 12) and (int(day) >= 1 and int(day) <= 31):
-                    break
-            except:
-                print()
-                pass
 
-    # Imprime a data formatada
-    print(f"{year}-{int(month):02}-{int(day):02}")
+# 2 formatos possiveis: 01/02/1900 ou January 2, 1900
+
+    while True:
+# Primeiro formato: separa (pela /) a data em mes dia e ano depois verifica os dois.
+        try:
+            date = input('Date: ')
+            month, day, year = date.split('/')
+            if month.isalpha():
+                main()
+            elif int(month) > 12 or int(day) > 31:
+                main()
+# Segundo formato: separa pelo espaco a data, verifica se ha virgula no dia e depois remove
+        except:
+                month, day, year = date.split(' ')
+                if ',' not in day:
+                    main()
+                day = day.replace(',','')
+                if day.isalpha():
+                    main()
+                elif int(day) > 31:
+                    main()
+# Verifica se o mes por extenso esta na lista, se estiver, acrescenta 1 para bater com a data
+                if month in list:
+                    month = list.index(month) + 1
+# Remove o espaco do ano e imprime a data formatada em YYYY-MM-DD
+        year = year.strip()
+        print(f'{year}-{int(month):02}-{int(day):02}')
+        break
+
 main()
