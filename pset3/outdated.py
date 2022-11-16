@@ -1,6 +1,7 @@
 """
 Prompts for a date, in month-day-year order, formatted like 9/8/1636 or September 8, 1636
 then output that same date in YYYY-MM-DD format. If the input is not a valid date in either format, prompt again.
+11.22
 """
 
 def main():
