@@ -3,7 +3,6 @@ Prompts the user for a str of text
 Outputs that text in the desired font.
 11.22
 '''
-
 import sys
 from pyfiglet import Figlet
 import random
