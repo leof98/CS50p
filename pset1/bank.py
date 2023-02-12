@@ -4,7 +4,6 @@ If the greeting starts with “hello”, output $0
 If the greeting starts with an “h”, output $20
 Otherwise, output $100
 Ignore any leading whitespace; Case-insensitively
-04.22 - 11.22 - 0.0
 """
 
 greeting = str(input('Greeting: '))
