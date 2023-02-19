@@ -1,7 +1,6 @@
 """
-Prompts the user for the name of a file and then outputs the media type if the name ends in
-(*case-insensitively) any of these suffixes: .gif .jpg .jpeg .png .pdf .txt .zip
-04.22, 11.22, 0.0
+Prompts the user for the name of a file and then outputs the media type 
+if the name ends in any of these suffixes: .gif .jpg .jpeg .png .pdf .txt .zip
 """
 file = str(input('File name: '))
 file = file.lower().strip()
