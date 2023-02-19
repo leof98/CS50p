@@ -3,7 +3,6 @@ Implement a program that prompts the user for a greeting
 If the greeting starts with “hello”, output $0
 If the greeting starts with an “h”, output $20
 Otherwise, output $100
-Ignore any leading whitespace; Case-insensitively
 """
 
 greeting = str(input('Greeting: '))
