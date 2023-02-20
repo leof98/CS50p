@@ -1,7 +1,6 @@
 """
 A program that prompts for a vanity plate and then output
 Valid if meets all of the requirements or Invalid if it does not.
-04.22, 11.22, 00.00
 """
 
 def main():
