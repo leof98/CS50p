@@ -1,9 +1,3 @@
-"""
-Prompts for a fraction (Formatted as X/Y) and then outputs as a percentage rounded, how much fuel is in the tank.
-If < than 1% remains, output E instead. And if > than 99% remains, output F instead.
-05.11, 11.22
-"""
-
 def main():
 
     while True:
