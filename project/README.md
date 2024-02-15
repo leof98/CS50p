@@ -1,7 +1,7 @@
 # Math Game
 
 ## Video Demo:
-[Watch Demo](https://youtu.be/hiEGu6Qgk6Q)
+[Watch Demo](https://youtu.be/)
 
 ## Description
 
